@@ -11,6 +11,10 @@
 	public void jspInit(){
 		///count.txt파일에 방문객수 저장하기
 		path=this.getServletContext().getRealPath("count/count.txt");
+		//아 그렇구나 구해보니까 따로 파일로 저장되는건 metadata 파일에 저장되는구나 그렇구나
+		//그래서 따로 보이는 파일에는 없었구나 그렇구나!
+		//System.out.println("방문자수 저장하는 파일 경로" + path);
+		
 		//파일에 저장된 객수 꺼내오기
 		//import해주기 java.io
 		FileReader fr=null;
