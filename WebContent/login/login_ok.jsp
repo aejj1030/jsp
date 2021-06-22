@@ -30,11 +30,13 @@
 			
 			//로그인 정보 저장 !!
 			Cookie ck = new Cookie("saveId", loginOk.getId());
+			
 			if(saveId == null){
 				ck.setMaxAge(0);
 			}else{
 				ck.setMaxAge(24*60*60);
 			}
+			
 			response.addCookie(ck);
 			
 			//id와 name 두개 저장
@@ -44,6 +46,7 @@
 			msg = "로그인 됐음";
 			url = request.getContextPath()+"/index.jsp";
 			break;
+			
 		case LoginCheck.NOT_ID :
 			msg = "아이디가 없음";
 			url = "login.jsp";

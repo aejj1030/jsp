@@ -183,6 +183,7 @@ public class BoardDataBean {
 			ps=con.prepareStatement(sql);
 			ps.setInt(1, num);
 			rs=ps.executeQuery();
+			
 			List<BoardDBBean> list=makeList(rs);
 			return list.get(0);
 			
